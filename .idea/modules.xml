@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/00_bkup/00_bkup.iml" filepath="$PROJECT_DIR$/00_bkup/00_bkup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_Strategy/00_bkup/00_bkup1.iml" filepath="$PROJECT_DIR$/03_Strategy/00_bkup/00_bkup1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11_Prototype/00_bkup/00_bkup2.iml" filepath="$PROJECT_DIR$/11_Prototype/00_bkup/00_bkup2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_Iterator/00_bkup/00_bkup3.iml" filepath="$PROJECT_DIR$/02_Iterator/00_bkup/00_bkup3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20_Flyweight/00_bkup/00_bkup4.iml" filepath="$PROJECT_DIR$/20_Flyweight/00_bkup/00_bkup4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_Adapter/01_Adapter.iml" filepath="$PROJECT_DIR$/01_Adapter/01_Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_Iterator/02_Iterator.iml" filepath="$PROJECT_DIR$/02_Iterator/02_Iterator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_Strategy/03_Strategy.iml" filepath="$PROJECT_DIR$/03_Strategy/03_Strategy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_State/04_State.iml" filepath="$PROJECT_DIR$/04_State/04_State.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_TemplateMethod/05_TemplateMethod.iml" filepath="$PROJECT_DIR$/05_TemplateMethod/05_TemplateMethod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_FactoryMethod/06_FactoryMethod.iml" filepath="$PROJECT_DIR$/06_FactoryMethod/06_FactoryMethod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_Builder/07_Builder.iml" filepath="$PROJECT_DIR$/07_Builder/07_Builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_AbstractFactory/08_AbstractFactory.iml" filepath="$PROJECT_DIR$/08_AbstractFactory/08_AbstractFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_Command/09_Command.iml" filepath="$PROJECT_DIR$/09_Command/09_Command.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10_Facade/10_Facade.iml" filepath="$PROJECT_DIR$/10_Facade/10_Facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11_Prototype/11_Prototype.iml" filepath="$PROJECT_DIR$/11_Prototype/11_Prototype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12_Bridge/12_Bridge.iml" filepath="$PROJECT_DIR$/12_Bridge/12_Bridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/13_Memento/13_Memento.iml" filepath="$PROJECT_DIR$/13_Memento/13_Memento.iml" />
+      <module fileurl="file://$PROJECT_DIR$/14_Composite/14_Composite.iml" filepath="$PROJECT_DIR$/14_Composite/14_Composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15_Decorator/15_Decorator.iml" filepath="$PROJECT_DIR$/15_Decorator/15_Decorator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/16_Visitor/16_Visitor.iml" filepath="$PROJECT_DIR$/16_Visitor/16_Visitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/17_Chain of Responsibility/17_Chain of Responsibility.iml" filepath="$PROJECT_DIR$/17_Chain of Responsibility/17_Chain of Responsibility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/18_Mediator/18_Mediator.iml" filepath="$PROJECT_DIR$/18_Mediator/18_Mediator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/19_Observer/19_Observer.iml" filepath="$PROJECT_DIR$/19_Observer/19_Observer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20_Flyweight/20_Flyweight.iml" filepath="$PROJECT_DIR$/20_Flyweight/20_Flyweight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/21_Proxy/21_Proxy.iml" filepath="$PROJECT_DIR$/21_Proxy/21_Proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/22_Interpreter/22_Interpreter.iml" filepath="$PROJECT_DIR$/22_Interpreter/22_Interpreter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/23_Singleton/23_Singleton.iml" filepath="$PROJECT_DIR$/23_Singleton/23_Singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GofDesignPattern.iml" filepath="$PROJECT_DIR$/.idea/GofDesignPattern.iml" />
+    </modules>
+  </component>
+</project>
