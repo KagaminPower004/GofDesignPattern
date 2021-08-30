@@ -3,10 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/00_bkup/00_bkup.iml" filepath="$PROJECT_DIR$/00_bkup/00_bkup.iml" />
-      <module fileurl="file://$PROJECT_DIR$/03_Strategy/00_bkup/00_bkup1.iml" filepath="$PROJECT_DIR$/03_Strategy/00_bkup/00_bkup1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/11_Prototype/00_bkup/00_bkup2.iml" filepath="$PROJECT_DIR$/11_Prototype/00_bkup/00_bkup2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/02_Iterator/00_bkup/00_bkup3.iml" filepath="$PROJECT_DIR$/02_Iterator/00_bkup/00_bkup3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/20_Flyweight/00_bkup/00_bkup4.iml" filepath="$PROJECT_DIR$/20_Flyweight/00_bkup/00_bkup4.iml" />
       <module fileurl="file://$PROJECT_DIR$/01_Adapter/01_Adapter.iml" filepath="$PROJECT_DIR$/01_Adapter/01_Adapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/02_Iterator/02_Iterator.iml" filepath="$PROJECT_DIR$/02_Iterator/02_Iterator.iml" />
       <module fileurl="file://$PROJECT_DIR$/03_Strategy/03_Strategy.iml" filepath="$PROJECT_DIR$/03_Strategy/03_Strategy.iml" />
