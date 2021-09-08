@@ -99,7 +99,7 @@ class Delight {
         calc2.plus(10);
         addYears = 10;
 
-        //計算結果メッセージその②：例）『"そこから" + addYears + "年経つと西暦：●●年"』
+        //計算結果メッセージその②：例）『"さらにそこから" + addYears + "年経つと西暦：●●年"』
         final String calcResultMessage2 = "さらに" +  calcResultMessage(addYears);
         System.out.println( calcResultMessage2 + calc2.getTemp() );
         //Mementoインスタンスを作成してmapに格納する
@@ -111,7 +111,7 @@ class Delight {
         calc3.plus(60);
         addYears = 60;
 
-        //計算結果メッセージその③：例）『"そこから" + addYears + "年経つと西暦：●●年"』
+        //計算結果メッセージその③：例）『"さらにそこから" + addYears + "年経つと西暦：●●年"』
         final String calcResultMessage3 = "さらに" +  calcResultMessage(addYears);
         System.out.println(calcResultMessage3 + calc3.getTemp());
         //Mementoインスタンスを作成してmapに格納する
