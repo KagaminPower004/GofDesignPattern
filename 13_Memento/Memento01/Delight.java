@@ -87,9 +87,10 @@ class Delight {
 
         System.out.println( "あなたの誕生年）  西暦：" + birthYear + "年");
 
-        //計算結果メッセージ：例）『"そこから" + addYears + "年経つと西暦："』
-        String calcResultMessage = calcResultMessage(addYears);
+        //計算結果メッセージ：例）『"そこから" + addYears + "年経つと西暦：●●年"』
+        final String calcResultMessage = calcResultMessage(addYears);
         System.out.println( calcResultMessage + calc.getTemp() + "年" );
+        //Mementoインスタンスを作成してmapに格納する
         map.put( calcResultMessage, calc.createMemento());
 
         // プラス10歳のときの西暦を知りたい
@@ -98,9 +99,10 @@ class Delight {
         calc2.plus(10);
         addYears = 10;
 
-        String calcResultMessage2 = calcResultMessage(addYears);
-        calcResultMessage2 = "さらに" +  calcResultMessage2;
+        //計算結果メッセージその②：例）『"そこから" + addYears + "年経つと西暦：●●年"』
+        final String calcResultMessage2 = "さらに" +  calcResultMessage(addYears);
         System.out.println( calcResultMessage2 + calc2.getTemp() );
+        //Mementoインスタンスを作成してmapに格納する
         map.put( calcResultMessage2, calc2.createMemento() );
 
         // プラス60歳のときの西暦を知りたい
@@ -109,9 +111,10 @@ class Delight {
         calc3.plus(60);
         addYears = 60;
 
-        String calcResultMessage3 = calcResultMessage(addYears);
-        calcResultMessage3 = "さらに" +  calcResultMessage3;
+        //計算結果メッセージその③：例）『"そこから" + addYears + "年経つと西暦：●●年"』
+        final String calcResultMessage3 = "さらに" +  calcResultMessage(addYears);
         System.out.println(calcResultMessage3 + calc3.getTemp());
+        //Mementoインスタンスを作成してmapに格納する
         map.put(calcResultMessage3, calc3.createMemento());
     }
 
