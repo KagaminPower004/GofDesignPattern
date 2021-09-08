@@ -71,39 +71,51 @@ class Memento {
 }
 
 class Delight {
-     private static Map<String,Memento> map = new HashMap<String,Memento>();
+    private static Map<String,Memento> map = new HashMap<String,Memento>();
 
     /**
      * 計算を実行するクラス
-     * パラメーター args[0]:誕生年 ,args[1]:年齢
+     * '@param args[0]:誕生年 ,args[1]:経過年数
      */
     public static void main(String args[]) {
         int birthYear = Integer.parseInt(args[0]);
-        int nenrei    = Integer.parseInt(args[1]);
-        
+        int addYears  = Integer.parseInt(args[1]);
+
         Calc calc = new Calc();
         calc.setTemp(birthYear);
-        calc.plus(nenrei);
+        calc.plus(addYears);
 
-        System.out.println( nenrei + "歳のときの西暦：" + calc.getTemp());
-        map.put(nenrei + "歳のときの西暦：", calc.createMemento());
+        System.out.println( "あなたの誕生年）  西暦：" + birthYear + "年");
+
+        //計算結果メッセージ：例）『"そこから" + addYears + "年経つと西暦："』
+        String calcResultMessage = calcResultMessage(addYears);
+        System.out.println( calcResultMessage + calc.getTemp() + "年" );
+        map.put( calcResultMessage, calc.createMemento());
 
         // プラス10歳のときの西暦を知りたい
         Calc calc2 = new Calc();
-        calc2.setMemento(map.get(nenrei + "歳のときの西暦："));
+        calc2.setMemento(map.get( calcResultMessage ));
         calc2.plus(10);
-        nenrei += 10;
-        
-        System.out.println(nenrei + "歳のときの西暦：" + calc2.getTemp());
-        map.put(nenrei + "歳のときの西暦：", calc2.createMemento());
+        addYears = 10;
+
+        String calcResultMessage2 = calcResultMessage(addYears);
+        calcResultMessage2 = "さらに" +  calcResultMessage2;
+        System.out.println( calcResultMessage2 + calc2.getTemp() );
+        map.put( calcResultMessage2, calc2.createMemento() );
 
         // プラス60歳のときの西暦を知りたい
         Calc calc3 = new Calc();
-        calc3.setMemento(map.get(nenrei + "歳のときの西暦："));
+        calc3.setMemento(map.get( calcResultMessage2 ));
         calc3.plus(60);
-        nenrei += 60;
-        
-        System.out.println(nenrei + "歳のときの西暦：" + calc3.getTemp());
-        map.put(nenrei + "歳のときの西暦：", calc3.createMemento());
+        addYears = 60;
+
+        String calcResultMessage3 = calcResultMessage(addYears);
+        calcResultMessage3 = "さらに" +  calcResultMessage3;
+        System.out.println(calcResultMessage3 + calc3.getTemp());
+        map.put(calcResultMessage3, calc3.createMemento());
+    }
+
+     private static String calcResultMessage(int addYears){
+        return "そこから" + addYears + "年経つと西暦：";
     }
 }
