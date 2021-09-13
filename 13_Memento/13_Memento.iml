@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../out/production/13_Memento" />
+    <output-test url="file://$MODULE_DIR$/../out/test/13_Memento" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/Memento01" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memento_org" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memento02" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Memento_org" />
     </content>
     <orderEntry type="inheritedJdk" />

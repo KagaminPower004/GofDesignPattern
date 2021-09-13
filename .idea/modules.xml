@@ -19,7 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/14_Composite/14_Composite.iml" filepath="$PROJECT_DIR$/14_Composite/14_Composite.iml" />
       <module fileurl="file://$PROJECT_DIR$/15_Decorator/15_Decorator.iml" filepath="$PROJECT_DIR$/15_Decorator/15_Decorator.iml" />
       <module fileurl="file://$PROJECT_DIR$/16_Visitor/16_Visitor.iml" filepath="$PROJECT_DIR$/16_Visitor/16_Visitor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/17_Chain of Responsibility/17_Chain of Responsibility.iml" filepath="$PROJECT_DIR$/17_Chain of Responsibility/17_Chain of Responsibility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/17_Chain_of_Responsibility/17_Chain_of_Responsibility.iml" filepath="$PROJECT_DIR$/17_Chain_of_Responsibility/17_Chain_of_Responsibility.iml" />
       <module fileurl="file://$PROJECT_DIR$/18_Mediator/18_Mediator.iml" filepath="$PROJECT_DIR$/18_Mediator/18_Mediator.iml" />
       <module fileurl="file://$PROJECT_DIR$/19_Observer/19_Observer.iml" filepath="$PROJECT_DIR$/19_Observer/19_Observer.iml" />
       <module fileurl="file://$PROJECT_DIR$/20_Flyweight/20_Flyweight.iml" filepath="$PROJECT_DIR$/20_Flyweight/20_Flyweight.iml" />
