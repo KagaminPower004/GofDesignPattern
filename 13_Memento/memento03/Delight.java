@@ -93,10 +93,11 @@ class Delight {
         final String calcResultMessage = calcResultMessage(addYears,calc.getTemp());
         System.out.println( calcResultMessage );
         //Mementoインスタンスを作成してmapに格納する
-        map.put( calcResultMessage, calc.createMemento());
+        final String firstKey = "第一回目の計算結果";
+        map.put( firstKey, calc.createMemento());
 
         // プラス10歳のときの西暦を知りたい
-        calc.setMemento(map.get( calcResultMessage ));
+        calc.setMemento(map.get( firstKey ));
         calc.plus(10);
         addYears = 10;
 
@@ -104,10 +105,11 @@ class Delight {
         final String calcResultMessage2 = calcResultMessage(addYears,calc.getTemp());
         System.out.println( calcResultMessage2 );
         //Mementoインスタンスを作成してmapに格納する
-        map.put( calcResultMessage2, calc.createMemento() );
+        final String secondKey = "第二回目の計算結果";
+        map.put( secondKey, calc.createMemento() );
 
         // プラス60歳のときの西暦を知りたい
-        calc.setMemento(map.get( calcResultMessage2 ));
+        calc.setMemento(map.get( secondKey ));
         calc.plus(60);
         addYears = 60;
 
@@ -115,7 +117,8 @@ class Delight {
         final String calcResultMessage3 = calcResultMessage(addYears,calc.getTemp());
         System.out.println( calcResultMessage3 );
         //Mementoインスタンスを作成してmapに格納する
-        map.put(calcResultMessage3, calc.createMemento());
+        final String thirdKey = "第三回目の計算結果";
+        map.put(thirdKey, calc.createMemento());
     }
 
      private static String calcResultMessage(int addYears,int resultYears){
