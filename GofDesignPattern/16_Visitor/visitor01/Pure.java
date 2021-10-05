@@ -1,8 +1,7 @@
 package visitor01;
 
 //面接官クラス
-import java.util.List;
- 
+
 abstract class MensetsuKan{
 
     public abstract void visit(Phone smartPhone);

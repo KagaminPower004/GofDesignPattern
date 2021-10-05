@@ -1,7 +1,6 @@
 package mediator02;
 
 import java.util.*;
-import java.util.Random;
 
 interface Mediator{
     public void addTarget(Target target);
