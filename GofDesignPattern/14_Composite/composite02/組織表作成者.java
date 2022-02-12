@@ -6,14 +6,18 @@ interface 組織階層{
     public void 組織一覧表();
 }
 
-class 組織名 implements 組織階層{
-    private List<組織階層> list = null;
-    private String name = null;
+class 組織 implements 組織階層{
 
-    public 組織名(String name){
-        this.name = name;
+    private List<組織階層> list = null;
+    private int level = 0;
+    private String 階層名 = null;
+    private String 組織名 = null;
+
+    public 組織(int level,String 階層名,String 組織名){
+        this.level = level;
+        this.階層名 = 階層名;
+        this.組織名 = 組織名;
         list = new ArrayList<組織階層>();
-        Collections.sort(list,null);
     }
 
     public void add(組織階層 entry){
@@ -21,46 +25,73 @@ class 組織名 implements 組織階層{
     }
 
     public void 組織一覧表(){
-        System.out.println( name );
+        System.out.println(makeTree());
+        組織一覧表生成();
+    }
 
+    private void 組織一覧表生成(){
         Iterator<組織階層> itr = list.iterator();
         while(itr.hasNext()){
             組織階層 entry = itr.next();
             entry.組織一覧表();
         }
     }
+
+    private String makeTree(){
+        String Branch = null;
+        String leaf = 階層名 + ":" + 組織名;
+        String root = 組織名;
+
+        switch (level){
+            case 1:
+                Branch = root;
+                break;
+            case 2:
+                Branch = "\t" + leaf;
+                break;
+            case 3:
+                Branch = "\t" + "\t" + leaf;
+                break;
+            case 4:
+                Branch = "\t" + "\t" + "\t" + leaf;
+                break;
+        }
+        return  Branch;
+    }
 }
 
 class 組織表作成者 {
     public static void main(String args[]){
 
-        組織名 階層4_組織1 = new 組織名("      営業部門");
-        組織名 階層4_組織2 = new 組織名("      生産部門");
+        組織 階層4_組織1 = new 組織(4,"部門","営業部門");
+        組織 階層4_組織2 = new 組織(4,"部門","生産部門");
 
-        組織名 階層3_組織1 = new 組織名("    北海道");
-        組織名 階層3_組織2 = new 組織名("    東北");
-        組織名 階層3_組織3 = new 組織名("    北陸");
+        組織 階層3_組織1 = new 組織(3,"地域","北海道");
+        組織 階層3_組織2 = new 組織(3,"地域","東北");
+        組織 階層3_組織3 = new 組織(3,"地域","北陸");
+
         階層3_組織1.add(階層4_組織1);
         階層3_組織2.add(階層4_組織1);
         階層3_組織2.add(階層4_組織2);
         階層3_組織3.add(階層4_組織1);
 
-        組織名 階層2_組織名1 = new 組織名("  環境デザイン事業部");
-        組織名 階層2_組織名2 = new 組織名("  Iot推進事業部");
-        組織名 階層2_組織名3 = new 組織名("  クラウド事業部");
-        階層2_組織名1.add(階層3_組織2);
-        階層2_組織名2.add(階層3_組織1);
-        階層2_組織名2.add(階層3_組織2);
-        階層2_組織名3.add(階層3_組織1);
-        階層2_組織名3.add(階層3_組織2);
-        階層2_組織名3.add(階層3_組織3);
+        組織 階層2_組織1 = new 組織(2,"事業部","環境デザイン事業部");
+        組織 階層2_組織2 = new 組織(2,"事業部","Iot推進事業部");
+        組織 階層2_組織3 = new 組織(2,"事業部","クラウド事業部");
 
-        組織名 階層1 = new 組織名("社長");
-        階層1.add(階層2_組織名1);
-        階層1.add(階層2_組織名2);
-        階層1.add(階層2_組織名3);
+        階層2_組織1.add(階層3_組織2);
+        階層2_組織2.add(階層3_組織1);
+        階層2_組織2.add(階層3_組織2);
+        階層2_組織3.add(階層3_組織1);
+        階層2_組織3.add(階層3_組織2);
+        階層2_組織3.add(階層3_組織3);
+
+        組織 階層1 = new 組織(1,"","社長");
+
+        階層1.add(階層2_組織1);
+        階層1.add(階層2_組織2);
+        階層1.add(階層2_組織3);
 
         階層1.組織一覧表();
-
     }
 }
