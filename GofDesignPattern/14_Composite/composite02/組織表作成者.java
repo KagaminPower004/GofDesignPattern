@@ -25,19 +25,28 @@ class 組織 implements 組織階層{
     }
 
     public void 組織一覧表(){
-        System.out.println(makeTree());
-        組織一覧表生成();
+
+        System.out.println(
+                new 樹形図作成(this.level,this.階層名,this.組織名).実行()
+        );
+
+        new 組織一覧表作成(list).実行();
+    }
+}
+
+class 樹形図作成{
+
+    private int level = 0;
+    private String 階層名 = null;
+    private String 組織名 = null;
+
+    樹形図作成(int level,String 階層名,String 組織名){
+        this.level = level;
+        this.階層名 = 階層名;
+        this.組織名 = 組織名;
     }
 
-    private void 組織一覧表生成(){
-        Iterator<組織階層> itr = list.iterator();
-        while(itr.hasNext()){
-            組織階層 entry = itr.next();
-            entry.組織一覧表();
-        }
-    }
-
-    private String makeTree(){
+    public String 実行(){
         String Branch = null;
         String leaf = 階層名 + ":" + 組織名;
         String root = 組織名;
@@ -57,6 +66,22 @@ class 組織 implements 組織階層{
                 break;
         }
         return  Branch;
+    }
+}
+
+class 組織一覧表作成 {
+    private List<組織階層> list = null;
+
+    組織一覧表作成(List<組織階層> list){
+        this.list = list;
+    }
+
+    public void 実行(){
+        Iterator<組織階層> itr = list.iterator();
+        while(itr.hasNext()){
+            組織階層 entry = itr.next();
+            entry.組織一覧表();
+        }
     }
 }
 
