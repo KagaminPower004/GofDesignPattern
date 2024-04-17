@@ -19,14 +19,17 @@ class AmaponMensetsuKan extends MensetsuKan{
     }
 
     public void visit(PurePhone smartPhone){
+        System.out.println("ピュアさんへアマポンから電話面接の電話が来たとき：");
         smartPhone.aisatsu();
     }
 
     public void visit(SuzukiPhone smartPhone){
+        System.out.println("鈴木さんへアマポンから電話面接で質問が来たとき：");
         smartPhone.shitsumon();
     }
 
     public void visit(TanakaPhone smartPhone){
+        System.out.println("田中さんへアマポンから電話面接で質問が来たとき：");
         smartPhone.shitsumon();
     }
 
@@ -40,15 +43,18 @@ class GyoumuSystemsMensetsuKan extends MensetsuKan{
     }
 
     public void visit(PurePhone smartPhone){
+        System.out.println("ピュアさんへ業務システムズから電話面接の電話が来たとき：");
         smartPhone.aisatsu();
     }
 
     public void visit(SuzukiPhone smartPhone){
-        smartPhone.shitsumon();
+        System.out.println("鈴木さんへ業務システムズから電話面接の電話が来たとき：");
+        smartPhone.aisatsu();
     }
 
     public void visit(TanakaPhone smartPhone){
-        smartPhone.shitsumon();
+        System.out.println("田中さんへ業務システムズから電話面接の電話が来たとき：");
+        smartPhone.aisatsu();
     }
 
 }
@@ -72,7 +78,6 @@ class PurePhone extends Phone implements MensetsuKanAcceptor{
     }
     public Object aisatsu(){
         System.out.println("    この度は面接の機会を下さり誠にありがとうございます!!");
- 
         return null;
     }
     /**
@@ -86,11 +91,11 @@ class PurePhone extends Phone implements MensetsuKanAcceptor{
 //鈴木さんの電話
 class SuzukiPhone extends Phone implements MensetsuKanAcceptor{
     public Object shitsumon(){
-        System.out.println("わかりません!!");
+        System.out.println("    わかりません!!");
         return null;
     }
     public Object aisatsu(){
-        System.out.println("ありがとうございます。");
+        System.out.println("    ありがとうございます。");
  
         return null;
     }
@@ -105,11 +110,11 @@ class SuzukiPhone extends Phone implements MensetsuKanAcceptor{
 //田中さんの電話
 class TanakaPhone extends Phone implements MensetsuKanAcceptor{
     public Object shitsumon(){
-        System.out.println("・・・・・・");
+        System.out.println("    ・・・・・・");
         return null;
     }
     public Object aisatsu(){
-        System.out.println("・・・・・・");
+        System.out.println("    ・・・・・・");
  
         return null;
     }
@@ -121,17 +126,22 @@ class TanakaPhone extends Phone implements MensetsuKanAcceptor{
     }
 }
 
-class Pure{
+class Interview{
     public static void main(String args[]){
 
-        MensetsuKanAcceptor pure = new PurePhone();
-        
         MensetsuKan amapon = new AmaponMensetsuKan();
-        System.out.println("アマポンから電話面接の電話が来たとき：");
-        pure.accept(amapon);
-
         MensetsuKan gyoumsystems = new GyoumuSystemsMensetsuKan();
-        System.out.println("業務システムズから電話面接の電話が来たとき：");
+
+        MensetsuKanAcceptor pure = new PurePhone();
+        pure.accept(amapon);
         pure.accept(gyoumsystems);
+
+        MensetsuKanAcceptor suzuki = new SuzukiPhone();
+        suzuki.accept(amapon);
+        suzuki.accept(gyoumsystems);
+
+        MensetsuKanAcceptor tanaka = new TanakaPhone();
+        tanaka.accept(amapon);
+        tanaka.accept(gyoumsystems);
     }
 }
