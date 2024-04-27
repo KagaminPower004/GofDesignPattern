@@ -5,6 +5,7 @@ abstract class Responsible{
     private String responsiblePerson = null;
 
     public Responsible(String responsiblePerson){
+
         this.responsiblePerson = responsiblePerson;
     }
 
@@ -13,7 +14,9 @@ abstract class Responsible{
         return next;
     }
 	
-	public String getResponsiblePerson(){ return this.responsiblePerson;}
+	public String getResponsiblePerson(){
+        return this.responsiblePerson;
+    }
 
     public final void putQuestion(Question question){
         if(beAbleToJudge(question)){
@@ -21,7 +24,10 @@ abstract class Responsible{
         }else if(next != null){
             next.putQuestion(question);
         }else{
-            System.out.println(question.question + "→" + responsiblePerson + "「誰にも判断できませんでした。とりあえず今は保留で。」");
+            System.out.println(question.question
+                    + "→"
+                    + responsiblePerson
+                    + "「誰にも判断できませんでした。とりあえず今は保留で。」");
         }
     }
 
@@ -44,7 +50,10 @@ class Interviewer extends Responsible{
     }
 
     protected void judge(Question question){
-        System.out.println(question.question + "→" + super.getResponsiblePerson() + "「採用！！」");
+        System.out.println(question.question
+                + "→"
+                + super.getResponsiblePerson()
+                + "「採用！！」");
     }
 }
 
@@ -63,7 +72,10 @@ class SubManager extends Responsible{
     }
 
     protected void judge(Question question){
-        System.out.println(question.question + "→" + super.getResponsiblePerson()  + "「まぁ採用しても良いかな～」");
+        System.out.println(question.question
+                + "→"
+                + super.getResponsiblePerson()
+                + "「まぁ採用しても良いかな～」");
     }
 }
 
@@ -82,7 +94,10 @@ class GeneralManager extends Responsible{
     }
 
     protected void judge(Question question){
-        System.out.println(question.question + "→" + super.getResponsiblePerson()  + "「判断が難しいところではあるが、不採用で。」");
+        System.out.println(question.question
+                + "→"
+                + super.getResponsiblePerson()
+                + "「判断が難しいところではあるが、不採用で。」");
     }
 }
 
@@ -101,7 +116,10 @@ class StaffMeeting extends Responsible{
     }
 
     protected void judge(Question question){
-        System.out.println(question.question + "→" + super.getResponsiblePerson()  + "「非常に残念ではあるが、彼は不採用と決めました。」");
+        System.out.println(question.question
+                + "→"
+                + super.getResponsiblePerson()
+                + "「非常に残念ではあるが、彼は不採用と決めました。」");
     }
 }
 
