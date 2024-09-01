@@ -10,7 +10,6 @@ interface Observer{
 class AtPipe implements Observer{
 
     private String name = "@パイプ";
-    private boolean result = false;
 
     public String getName(){
         return name;
@@ -25,7 +24,6 @@ class AtPipe implements Observer{
 class FindBob implements Observer{
 
     private String name = "FindBob";
-    private boolean result = false;
 
     public String getName(){
         return name;
@@ -82,7 +80,6 @@ class NCCDATA extends Subject{
 class Galaxy extends Subject{
 
     private String name = "ギャラクシーシステムズ";
-
     public String getName(){
         return name;
     }
@@ -92,7 +89,6 @@ class Galaxy extends Subject{
 class Combo extends Subject{
 
     private String name = "コンボシステムズ";
-
     public String getName(){
         return name;
     }
@@ -102,7 +98,6 @@ class Combo extends Subject{
 class GooKle extends Subject{
 
     private String name = "グークル";
-
     public String getName(){
         return name;
     }
@@ -112,7 +107,6 @@ class GooKle extends Subject{
 class Bizsys extends Subject{
 
     private String name = "日本ビズシステムズ";
-
     public String getName(){
         return name;
     }
@@ -122,7 +116,6 @@ class Bizsys extends Subject{
 class Sales extends Subject{
 
     private String name = "セールスコース株式会社";
-
     public String getName(){
         return name;
     }
@@ -132,7 +125,6 @@ class Sales extends Subject{
 class Sonson extends Subject{
 
     private String name = "Sonson株式会社";
-
     public String getName(){
         return name;
     }
@@ -176,6 +168,7 @@ class Pure{
 
         Subject gookle = new GooKle();
         gookle.addObserver(pipe);
+        gookle.addObserver(bob);
         gookle.reply(false);
         gookle.notifyObservers();
 
