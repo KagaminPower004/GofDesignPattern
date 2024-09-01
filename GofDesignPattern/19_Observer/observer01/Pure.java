@@ -36,7 +36,7 @@ class FindBob implements Observer{
 }
 
 abstract class Subject{
-    private Map<String,Observer> observerMap = new HashMap<String,Observer>();
+    private Map<String,Observer> observerMap = new HashMap<>();
     private boolean result = false;
 
     public abstract String getName();
@@ -61,7 +61,6 @@ abstract class Subject{
 class GyoumuSystems extends Subject{
 
     private String name = "業務システムズ";
-
     public String getName(){
         return name;
     }
