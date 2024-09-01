@@ -18,7 +18,7 @@ class AtPipe implements Observer{
 
     public void upDate(boolean result,String name){
         if(result){System.out.println(this.name + "より：" + name + "から『採用』の通知が来ました!");}
-        else{System.out.println(this.name + "より：" + name + "から不採用の通知が来ました。");}
+        else      {System.out.println(this.name + "より：" + name + "から不採用の通知が来ました。");}
     }
 }
 
@@ -33,7 +33,7 @@ class FindBob implements Observer{
 
     public void upDate(boolean result,String name){
         if(result){System.out.println(this.name + "より：" + name + "から『採用』の通知が来ました!");}
-        else{System.out.println(this.name + "より：" + name + "から不採用の通知が来ました。");}
+        else      {System.out.println(this.name + "より：" + name + "から不採用の通知が来ました。");}
     }
 }
 
@@ -56,14 +56,17 @@ class GyoumuSystems extends Subject{
     }
 
     public void addObserver(Observer observer){
+
         this.observerMap.put(observer.getName(),observer);
     }
 
     public void notifyObservers(){
+
         this.observerMap.forEach((key, value) -> value.upDate(this.result,this.name));
     }
 
     public void reply(boolean result){
+
         this.result = result;
     }
 
@@ -80,14 +83,17 @@ class NCCDATA extends Subject{
     }
 
     public void addObserver(Observer observer){
+
         this.observerMap.put(observer.getName(),observer);
     }
 
     public void notifyObservers(){
+
         this.observerMap.forEach((key, value) -> value.upDate(this.result,this.name));
     }
 
     public void reply(boolean result){
+
         this.result = result;
     }
 
@@ -104,14 +110,17 @@ class Galaxy extends Subject{
     }
 
     public void addObserver(Observer observer){
+
         this.observerMap.put(observer.getName(),observer);
     }
 
     public void notifyObservers(){
+
         this.observerMap.forEach((key, value) -> value.upDate(this.result,this.name));
     }
 
     public void reply(boolean result){
+
         this.result = result;
     }
 
@@ -128,14 +137,17 @@ class Combo extends Subject{
     }
 
     public void addObserver(Observer observer){
+
         this.observerMap.put(observer.getName(),observer);
     }
 
     public void notifyObservers(){
+
         this.observerMap.forEach((key, value) -> value.upDate(this.result,this.name));
     }
 
     public void reply(boolean result){
+
         this.result = result;
     }
 
@@ -152,14 +164,17 @@ class GooKle extends Subject{
     }
 
     public void addObserver(Observer observer){
+
         this.observerMap.put(observer.getName(),observer);
     }
 
     public void notifyObservers(){
+
         this.observerMap.forEach((key, value) -> value.upDate(this.result,this.name));
     }
 
     public void reply(boolean result){
+
         this.result = result;
     }
 
@@ -176,14 +191,17 @@ class Bizsys extends Subject{
     }
 
     public void addObserver(Observer observer){
+
         this.observerMap.put(observer.getName(),observer);
     }
 
     public void notifyObservers(){
+
         this.observerMap.forEach((key, value) -> value.upDate(this.result,this.name));
     }
 
     public void reply(boolean result){
+
         this.result = result;
     }
 
@@ -200,14 +218,17 @@ class Sales extends Subject{
     }
 
     public void addObserver(Observer observer){
+
         this.observerMap.put(observer.getName(),observer);
     }
 
     public void notifyObservers(){
+
         this.observerMap.forEach((key, value) -> value.upDate(this.result,this.name));
     }
 
     public void reply(boolean result){
+
         this.result = result;
     }
 
@@ -224,14 +245,17 @@ class Sonson extends Subject{
     }
 
     public void addObserver(Observer observer){
+
         this.observerMap.put(observer.getName(),observer);
     }
 
     public void notifyObservers(){
+
         this.observerMap.forEach((key, value) -> value.upDate(this.result,this.name));
     }
 
     public void reply(boolean result){
+
         this.result = result;
     }
 
