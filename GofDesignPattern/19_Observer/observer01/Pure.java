@@ -25,9 +25,7 @@ class FindBob implements Observer{
 
     private String name = "FindBob";
 
-    public String getName(){
-        return name;
-    }
+    public String getName(){ return name; }
 
     public void upDate(boolean result,String name){
         if(result){System.out.println(this.name + "より：" + name + "から『採用』の通知が来ました!");}
@@ -48,7 +46,7 @@ abstract class Subject{
 
     public void notifyObservers(){
 
-        this.observerMap.forEach((key, value) -> value.upDate(this.result,getName()));
+        this.observerMap.forEach((key, value) -> value.upDate(this.result,this.getName()));
     }
 
     public void reply(boolean result){

@@ -9,7 +9,12 @@ import java.lang.*;
 class Oshigoto {
     String type;
     Oshigoto(String type){
+
         this.type = type;
+        //待機時間を設ける
+        try{
+            Thread.sleep(1000);
+        }catch(InterruptedException e){}
     }
     void print(){
         System.out.print(this.type);
@@ -56,7 +61,7 @@ class Pure {
         }
 
         long end = System.currentTimeMillis();
-        System.out.println("(処理時間:" + (end - start) + "秒)");
+        System.out.println("(処理時間:" + (end - start) + "ミリ秒)");
 
     }
 }
