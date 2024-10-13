@@ -22,7 +22,7 @@ class Oshigoto {
 }
 
 class OshigotoFactory {
-    Map<String, Oshigoto> pool = new HashMap<String, Oshigoto>();
+    Map<String, Oshigoto> pool = new HashMap<>();
 
     private static final OshigotoFactory singleton = new OshigotoFactory();
 
@@ -49,7 +49,7 @@ class Pure {
         long start = System.currentTimeMillis();
 
         OshigotoFactory factory = OshigotoFactory.getInstance();
-        List<Oshigoto> oshigotoTachi = new ArrayList<Oshigoto>();
+        List<Oshigoto> oshigotoTachi = new ArrayList<>();
         oshigotoTachi.add(factory.get("設計"));
         oshigotoTachi.add(factory.get("議事録"));
         oshigotoTachi.add(factory.get("プレゼン"));
