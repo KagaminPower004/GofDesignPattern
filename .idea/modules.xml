@@ -27,6 +27,7 @@
       <module fileurl="file://$PROJECT_DIR$/GofDesignPattern/22_Interpreter/22_Interpreter.iml" filepath="$PROJECT_DIR$/GofDesignPattern/22_Interpreter/22_Interpreter.iml" />
       <module fileurl="file://$PROJECT_DIR$/GofDesignPattern/23_Singleton/23_Singleton.iml" filepath="$PROJECT_DIR$/GofDesignPattern/23_Singleton/23_Singleton.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/MySystemDesignStudy.iml" filepath="$PROJECT_DIR$/.idea/MySystemDesignStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GofDesignPattern/20_Flyweight/flyweight02/flyweight02.iml" filepath="$PROJECT_DIR$/GofDesignPattern/20_Flyweight/flyweight02/flyweight02.iml" />
     </modules>
   </component>
 </project>
