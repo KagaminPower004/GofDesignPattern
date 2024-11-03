@@ -8,15 +8,11 @@ interface SystemEngineer {
 }
 
 //内藤SEクラス(本人オブジェクト)
-class naito implements SystemEngineer {
+class Naito implements SystemEngineer {
  
-    public void question1() {
-        System.out.print("indexを追加することで～");
-    }
+    public void question1() { System.out.print("B-TreeIndexを追加すること"); }
  
-    public void question2() {
-        System.out.print("パラメーターの設定変更をすることで～");
-    }
+    public void question2() { System.out.print("BitMapインデックスをすること"); }
  
     public void question3() {
         System.out.print("別途ログを出すプログラムを追加すること");
@@ -26,15 +22,13 @@ class naito implements SystemEngineer {
 
 //PureSEクラス(代理人オブジェクト)
 class Pure implements SystemEngineer {
-    private SystemEngineer naito = new naito();
+    private SystemEngineer naito = new Naito();
  
     public void question1() {
         System.out.println("それはB-TreeIndexの追加が有効です。");
     }
  
-    public void question2() {
-        System.out.println("それはBitMapインデックスが有効です。");
-    }
+    public void question2() { System.out.println("それはBitMapインデックスが有効です。"); }
  
     public void question3() {
         System.out.print("答えは「");
